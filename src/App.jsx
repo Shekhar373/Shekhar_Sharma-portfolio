@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Work from "./components/Work";
 import Starfield from "./r3f/Starfield";
 import TeckStack from "./components/TeckStack";
+import Projects from "./components/Projects";
 
 const App = () => {
    
@@ -21,8 +22,7 @@ const App = () => {
 
       <div>
         <Hero />
-        <Work />
-        <TeckStack />
+        <Projects />
       </div>
     </div>
   );
