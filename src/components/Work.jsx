@@ -4,8 +4,8 @@ import WorkFlag from '../r3f/WorkFlag'
 
 const Work = () => {
   return (
-    <div className='h-fit w-full relative z-10'>
-      <h1 className='text-[6vw] text-center p-10'>Project</h1>
+    <div className='h-fit w-full bg-black relative z-10'>
+      {/* <h1 className='text-[6vw] text-center p-10'>Project</h1> */}
         <div className='h-screen w-full'>
             <Canvas>
                 <WorkFlag />

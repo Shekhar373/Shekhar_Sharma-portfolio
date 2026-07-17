@@ -7,14 +7,14 @@ import Starfield from "./r3f/Starfield";
 import TeckStack from "./components/TeckStack";
 
 const App = () => {
-  
+   
   return (
-    <div className="relative">
+    <div className="relative bg-black">
       <div className="fixed top-0">
         <Navbar />
       </div>
-      <div className="h-screen w-full bg-black fixed top-0 -z-10">
-        <Canvas camera={{ near: 3 }}>
+      <div id="hero" className="h-screen w-full fixed top-0">
+        <Canvas camera={{ near: 2 }}>
           <Starfield />
         </Canvas>
       </div>

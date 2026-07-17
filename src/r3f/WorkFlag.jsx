@@ -22,7 +22,6 @@ const WorkFlag = () => {
   let mouseX = useRef(0);
   let mouseY = useRef(0);
 
-
   useMemo(() => {
     const handleMouseMove = (e) => {
       mouseX.current = (e.clientX / size.width) * 2 - 1;
@@ -47,7 +46,7 @@ const WorkFlag = () => {
   return (
     <>
       <mesh ref={meshRef}>
-        <planeGeometry args={[10, 5, 200, 200]} />
+        <planeGeometry args={[5, 3, 100, 100]} />
         <shaderMaterial
           ref={materialRef}
           vertexShader={vertex}
@@ -56,11 +55,9 @@ const WorkFlag = () => {
             uTime: { value: 0 },
             uTexture: { value: new THREE.TextureLoader().load("/image.jpg") },
           }}
-     
           // wireframe={true}
         />
       </mesh>
-      {/* <OrbitControls /> */}
     </>
   );
 };
