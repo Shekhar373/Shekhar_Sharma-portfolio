@@ -4,14 +4,16 @@ import * as THREE from "three";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const Starfield = () => {
   const starsRef = useRef();
+  gsap.registerPlugin(ScrollTrigger)
   const { camera, size } = useThree();
-  camera.position.z = 20;
+  camera.position.z = 15;
 
 
-  const particletexture = useTexture("/star.jpg")
+  // const particletexture = useTexture("/star.jpg")
 
   // ⭐ Generate positions once
   const positions = useMemo(() => {
@@ -67,10 +69,18 @@ const Starfield = () => {
 
   useGSAP(() => {
     gsap.to(camera.position, {
-      z: "-=16",
+      z: "-=11",
       duration: 4,
       // delay: 2,
-      ease: "power2.out"
+      ease: "power1.out",
+      scrollTrigger:{
+        trigger:".hero",
+        start:"top top",
+        end:"bottom top",
+        pin:true,
+        // markers:true,
+        scrub:1
+      }
     });
   }, [camera]);
 

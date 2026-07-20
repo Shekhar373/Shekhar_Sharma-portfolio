@@ -9,6 +9,10 @@ body{
   font-family: font;
   src: url(/NotoSans-VariableFont_wdth\,wght.ttf);
 }
+@font-face {
+  font-family: heading;
+  src: url(/public/heading.otf);
+}
 
 button {
     backdrop-filter: blur(10px);
