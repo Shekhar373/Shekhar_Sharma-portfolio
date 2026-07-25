@@ -72,11 +72,11 @@ const Starfield = () => {
       z: "-=11",
       duration: 4,
       // delay: 2,
-      ease: "power1.out",
+      ease: "power1.inOut",
       scrollTrigger:{
         trigger:".hero",
         start:"top top",
-        end:"bottom top",
+        end:"bottom -150",
         pin:true,
         // markers:true,
         scrub:1
