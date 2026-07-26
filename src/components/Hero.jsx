@@ -20,7 +20,7 @@ const Hero = () => {
         scrub:1
       }
     })
-  })
+  },[])
   return (
     <div className="hero h-screen relative w-full flex justify-center items-end gap-5 text-center">
       <div className="font-[heading] text-amber-100">

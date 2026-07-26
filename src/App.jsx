@@ -1,17 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Starfield from "./r3f/Starfield";
 import Projects from "./components/Projects";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
-import gsap from "gsap";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import AboutMe from "./components/AboutMe";
+import Services from "./components/Services";
 
 const App = () => {
+
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  }, []);
 
   return (
     <div className="bg-[#000014] text-amber-100 overflow-x-hidden">
@@ -27,9 +32,10 @@ const App = () => {
         <div id="smooth-content">
           <Hero />
           <About />
-          <AboutMe />
           <Projects />
-          {/* <Contact /> */}
+          <AboutMe />
+          <Services />
+          <Contact />
           <Footer />
         </div>
       </div>

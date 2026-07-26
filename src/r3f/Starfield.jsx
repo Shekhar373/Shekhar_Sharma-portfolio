@@ -78,6 +78,7 @@ const Starfield = () => {
         start:"top top",
         end:"bottom -150",
         pin:true,
+        pinSpacing:true,
         // markers:true,
         scrub:1
       }

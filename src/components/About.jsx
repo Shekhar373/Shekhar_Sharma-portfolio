@@ -4,50 +4,48 @@ import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
 const About = () => {
-     const leftref = useRef()
-     const rightref = useRef()
+  const leftref = useRef();
+  const rightref = useRef();
+  const sectionRef = useRef()
+  gsap.registerPlugin(ScrollTrigger);
 
-//   useGSAP(() => {
-//     gsap.registerPlugin(ScrollTrigger);
+    // useGSAP(() => {
 
-//     const left = leftref.current
-//     const right = rightref.current
 
-//     const leftRect = left.getBoundingClientRect();
-//     const rightRect = right.getBoundingClientRect();
+    //   gsap.to(leftref.current, {
+    //     xPercent:20,
+    //     duration: 0.7,
+    //     ease: "power3.inOut",
+    //     scrollTrigger: {
+    //       trigger: sectionRef.current,
+    //       start: "top 50%",
+    //       end: "bottom 20%",
+    //       markers:true,
+    //       toggleActions: "play none none reverse"
 
-//     gsap.to(left, {
-//       x: -leftRect.left,
-//       duration: 0.7,
-//       ease: "power3.inOut",
-//       scrollTrigger: {
-//         trigger: left,
-//         start: "top 50%",
-//         end: "bottom 20%",
-//         // markers:true,
-//         toggleActions: "play none none reverse"
+    //     },
+    //   });
+
+    //   gsap.to(rightref.current, {
         
-//       },
-//     });
-
-//     gsap.to(right, {
-//       x: window.innerWidth - rightRect.right,
-//       duration: 0.7,
-//       ease: "power3.inOut",
-//       scrollTrigger: {
-//         trigger: right,
-//         start: "top 50%",
-//         end: "bottom 20%",
-//         toggleActions: "play none none reverse"
-//       },
-//     });
-//   });
+    //     duration: 0.7,
+    //     ease: "power3.inOut",
+    //     scrollTrigger: {
+    //       trigger:sectionRef.current,
+    //       start: "top 50%",
+    //       end: "bottom 20%",
+    //       toggleActions: "play none none reverse"
+    //     },
+    //   });
+    // });
   return (
-    <div className="h-screen w-full px-5">
-      <div className="h-1/2 flex flex-col leading-[6vw] gap-3 justify-center font-extralight text-[7vw] text-amber-100">
-        <span ref={leftref} className="left">ENGINEERING IMMERSIVE</span>
-        <span ref={rightref} className="right pl-[40vw]">WEB EXPERIANCE</span>
-      </div>
+    <div ref={sectionRef} className="h-[80vh]  flex flex-col leading-[6vw] p-5 gap-3 justify-center font-extralight text-[7vw] text-amber-100">
+      <span ref={leftref} className="left">
+        ENGINEERING IMMERSIVE
+      </span>
+      <span ref={rightref} className="right pl-[40vw]">
+        WEB EXPERIANCE
+      </span>
     </div>
   );
 };

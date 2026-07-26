@@ -5,6 +5,11 @@ body{
     font-family: font;
 }
 
+::selection{
+  background: rgb(241, 226, 189);
+  color: #000014;
+}
+
 @font-face {
   font-family: font;
   src: url(/NotoSans-VariableFont_wdth\,wght.ttf);
