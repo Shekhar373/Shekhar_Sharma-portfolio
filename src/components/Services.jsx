@@ -36,9 +36,9 @@ const Services = () => {
   return (
     <>
     <div className="h-fit w-full p-5 ">
-        <h1 className="text-[8vw] font-[heading] font-light">SERVICES</h1>
+        <h1 className="text-[12vw] lg:text-[8vw] font-[heading] font-light">SERVICES</h1>
     </div>
-      <div className="h-[120vh] w-full flex flex-col justify-center relative z-20">
+      <div className="lg:h-[120vh] w-full flex flex-col justify-center relative z-20">
         {services.map((service, idx) => (
           <div
             key={idx}
@@ -56,24 +56,23 @@ const Services = () => {
                 ease: "power4.out",
               })
             }
-            className="h-[25vh]l w-full flex p-5 relative"
+            className="h-fit lg:h-[25vh]l w-full flex flex-col max-md:gap-3 lg:flex-row p-5 relative"
           >
             <div
               ref={imageRefs.current[idx]}
               className="absolute inset-0 overflow-hidden"
               style={{ clipPath: "inset(100% 0 0 0)" }}
             >
-              {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-IkmqKTAmHeqXqOoeV3ztlrnjXL2strt4Mm2UYp1AQ&s=10" className="h-full w-full object-cover" alt="" /> */}
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWKyXCw3pd94z7r9e4LmZP4Jbw6QapEw5tFKEVgu5Lyw&s=10"
+                src="https://i.pinimg.com/736x/e6/41/0b/e6410b54136be46bcefae0b0cfdaca50.jpg"
                 className="h-full w-full object-cover"
                 alt=""
               />
             </div>
-            <div className="h-full w-3/4 text-[3vw] font-light flex ">
+            <div className="h-full w-full lg:w-3/4 text-[6vw] lg:text-[3vw] font-light flex ">
               <h1 className="mix-blend-difference">{service.heading}</h1>
             </div>
-            <div className="h-full w-1/4 font-medium flex items-center">
+            <div className="h-full w-full lg:w-1/4 max-md:text-xs font-medium flex items-center">
               <h1 className="mix-blend-difference">{service.description}</h1>
             </div>
           </div>

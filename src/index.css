@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-body{
-    color:aliceblue;
-    font-family: font;
+body {
+  color: aliceblue;
+  font-family: font;
 }
 
-::selection{
+::selection {
   background: rgb(241, 226, 189);
   color: #000014;
 }
@@ -20,57 +20,74 @@ body{
 }
 
 button {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* glowing animated border */
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* border thickness */
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.431),
+    transparent
+  );
+
+  background-size: 200% 200%;
+  animation: borderMove 4s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* subtle glow */
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.431),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* hover effect */
+button:hover::after {
+  opacity: 1;
+}
+
+/* animation */
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* glowing animated border */
-  button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px; /* border thickness */
-    
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.431),
-      transparent
-    );
-  
-    background-size: 200% 200%;
-    animation: borderMove 4s linear infinite;
-  
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+  100% {
+    background-position: 200% 50%;
   }
-  
-  /* subtle glow */
-  button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 255, 255, 0.431),
-      transparent 70%
-    );
-    opacity: 0;
-    transition: 0.3s;
-  }
-  
-  /* hover effect */
-  button:hover::after {
-    opacity: 1;
-  }
-  
-  /* animation */
-  @keyframes borderMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-  }
+}
+
+.border-animate::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.border-animate:hover::after {
+  width: 100%;
+}

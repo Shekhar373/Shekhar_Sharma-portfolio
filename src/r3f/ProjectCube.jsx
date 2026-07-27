@@ -16,8 +16,13 @@ const ProjectCube = () => {
   });
 
   return (
-    <mesh ref={meshRef}>
-      <boxGeometry args={[3, 3, 3, 10, 10, 10]} />
+    <mesh
+    onClick={()=>{
+      console.log("clicked")
+    }
+    }
+     ref={meshRef}>
+      <boxGeometry args={[3.5, 3.5, 3.5, 10, 10, 10]} />
       <meshBasicMaterial
        color='orange'
        map={texture}

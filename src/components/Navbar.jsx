@@ -6,7 +6,7 @@ const Navbar = () => {
       <div>
         <h3 className="text-4xl font-[heading]">SH</h3>
       </div>
-      <div className="flex gap-5 text-sm lg:text-xl">
+      <div className="flex gap-2 lg:gap-5 text-sm lg:text-xl">
         <h3>Project</h3>
         <h3>Contact Us</h3>
       </div>

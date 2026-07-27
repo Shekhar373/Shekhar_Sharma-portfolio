@@ -9,9 +9,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
+import { ScrollTrigger } from "gsap/all";
 
 const App = () => {
-
   useLayoutEffect(() => {
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();

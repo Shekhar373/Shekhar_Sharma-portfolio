@@ -22,9 +22,9 @@ const Hero = () => {
     })
   },[])
   return (
-    <div className="hero h-screen relative w-full flex justify-center items-end gap-5 text-center">
+    <div className="hero h-screen relative w-full flex justify-center items-center lg:items-end gap-5 text-center">
       <div className="font-[heading] text-amber-100">
-        <h1 ref={textref} className="text-[11vw] leading-[9vw]">SHEKHAR SHARMA</h1>
+        <h1 ref={textref} className="text-[17vw] lg:text-[11vw] leading-[15vw] lg:leading-[9vw]">SHEKHAR SHARMA</h1>
       </div>
     </div>
   );
