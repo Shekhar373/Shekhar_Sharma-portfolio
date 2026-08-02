@@ -1,44 +1,18 @@
-import React, { useEffect, useLayoutEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Starfield from "./r3f/Starfield";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import AboutMe from "./components/AboutMe";
-import Services from "./components/Services";
-import { ScrollTrigger } from "gsap/all";
+import React from "react";
+import SmoothScroll from "./components/Lenis";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
-  useLayoutEffect(() => {
-    requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
-  }, []);
-
   return (
     <div className="bg-[#000014] text-amber-100 overflow-x-hidden">
-      <div className="fixed top-0 z-50 w-full">
-        <Navbar />
-      </div>
-      <div className="h-screen w-full fixed top-0 z-0">
-        <Canvas camera={{ near: 2 }}>
-          <Starfield />
-        </Canvas>
-      </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <Hero />
-          <About />
-          <Projects />
-          <AboutMe />
-          <Services />
-          <Contact />
-          <Footer />
-        </div>
-      </div>
+      <SmoothScroll />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        {/* <Route path="/work/:slug" element={<ProjectDetails />} /> */}
+      </Routes>
     </div>
   );
 };

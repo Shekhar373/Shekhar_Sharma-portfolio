@@ -91,3 +91,11 @@ button:hover::after {
 .border-animate:hover::after {
   width: 100%;
 }
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

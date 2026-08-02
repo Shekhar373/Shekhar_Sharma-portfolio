@@ -17,10 +17,6 @@ const ProjectCube = () => {
 
   return (
     <mesh
-    onClick={()=>{
-      console.log("clicked")
-    }
-    }
      ref={meshRef}>
       <boxGeometry args={[3.5, 3.5, 3.5, 10, 10, 10]} />
       <meshBasicMaterial

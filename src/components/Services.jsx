@@ -9,22 +9,22 @@ const Services = () => {
     {
       heading: "FRONTEND DEVELOPMENT",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam minus beatae distinctio incidunt officiis sit id mollitia vitae.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
     },
     {
       heading: "CREATIVE PORTFOLIO",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam minus beatae distinctio incidunt officiis sit id mollitia vitae.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
     },
     {
       heading: "INTERACTIVE ANIMATION",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam minus beatae distinctio incidunt officiis sit id mollitia vitae.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
     },
     {
       heading: "3D EXPERIENCE",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam minus beatae distinctio incidunt officiis sit id mollitia vitae.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
     },
   ];
 
