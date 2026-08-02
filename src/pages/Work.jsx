@@ -1,8 +1,11 @@
 import React from 'react'
+import WorkCard from '../components/workcomp/WorkCard'
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <div>
+        <WorkCard />
+    </div>
   )
 }
 
