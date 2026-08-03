@@ -41,7 +41,7 @@ const WorkCard = () => {
           <div className="h-[40vh] lg:h-screen w-full workcard-main overflow-hidden relative">
             <div
               className="absolute z-10 h-[35vh] w-[60vw] bg-black/35
-                        backdrop-blur-lg border border-white/10
+                        backdrop-blur-lg border border-white/10 text-white
                         rounded-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-between px-5"
             >
               <div className="text-xs h-full flex flex-col items-end  pt-5">

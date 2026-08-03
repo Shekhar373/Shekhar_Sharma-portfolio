@@ -18,7 +18,7 @@ export const work = [
   {
     title: "ECHO STUDIO",
     slug:"3d-scroll",
-    cover: "https://i.pinimg.com/736x/ef/6a/e4/ef6ae4f093193157f047ba766af9452e.jpg",
+    cover: "https://framerusercontent.com/images/Ee6DB9MNUKlgtPB8nYOdEYZ8i1M.png?scale-down-to=2048&width=3955&height=2966.jpg",
     description: "Zippi is a food and beverage brand crafted with a bold and modern visual identity. From logo to packaging, every element is designed to create a distinctive and memorable brand presence.",
 
     
