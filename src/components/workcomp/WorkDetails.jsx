@@ -68,7 +68,7 @@ const WorkDetails = () => {
       </section>
       <section>
         <ImageGallery />
-        <Result />
+        <Result livelink={project.livelink} />
       </section>
 
       <Footer />

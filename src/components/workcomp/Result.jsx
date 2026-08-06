@@ -1,6 +1,6 @@
 import React from "react";
 
-const Result = () => {
+const Result = ({ livelink }) => {
   return (
     <div className="h-[60vh] max-md:pt-[20vh] lg:h-screen w-full flex flex-col lg:flex-row items-center p-4 md:p-8 lg:p-10 gap-10 lg:gap-0">
       <div className="h-auto lg:h-[40vh] w-full lg:w-1/2 flex items-start lg:items-center mb-6 lg:mb-0">
@@ -14,10 +14,13 @@ const Result = () => {
           plays.
         </h1>
         <div className="flex flex-col sm:flex-row gap-2">
-          <button className="w-full sm:w-auto min-w-[160px] px-4 py-2 bg-black text-white rounded-lg">
+          <button
+            className="w-full sm:w-auto min-w-40 px-4 py-2 cursor-pointer bg-black text-white rounded-lg"
+            onClick={() => window.open(livelink, "_blank")}
+          >
             VIEW LIVE SITE
           </button>
-          <button className="w-full sm:w-auto min-w-[160px] px-4 py-2 border bg-black text-white rounded-lg">
+          <button className="w-full sm:w-auto min-w-40 px-4 py-2 border bg-black text-white rounded-lg">
             START A PROJECT
           </button>
         </div>

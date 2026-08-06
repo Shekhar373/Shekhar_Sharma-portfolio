@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="flex p-5 h-[10vh] mix-blend-difference text-amber-100 w-screen justify-between  items-center">
       <div>
-        <h3 className="text-4xl font-[heading]">SH</h3>
+        <Link to="/" className="text-4xl font-[heading]">SH</Link>
       </div>
       <div className="flex gap-2 lg:gap-5 text-sm lg:text-xl">
         <Link to="/work">Projects</Link>

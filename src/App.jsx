@@ -1,22 +1,28 @@
 import React from "react";
-import SmoothScroll from "./components/Lenis";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import { Route, Routes } from "react-router-dom";
 import PageTransition from "./components/common/PageTransition";
 import WorkDetails from "./components/workcomp/WorkDetails";
+import LenisComponent from "./components/common/Lenis";
+import ScrollToTop from "./components/common/ScrollToTop";
+import Layout from "./components/common/Layout";
+import Navbar from "./components/common/Navbar";
 
 const App = () => {
   return (
     <div className="bg-[#000014] text-amber-100 overflow-x-hidden">
-      <SmoothScroll />
-      {/* <PageTransition> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/:slug" element={<WorkDetails />} />
-      </Routes>
-      {/* </PageTransition> */}
+      <div className="fixed top-0 z-50 w-full">
+        <Navbar />
+      </div>
+      <LenisComponent />
+      <ScrollToTop />
+     
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/work/:slug" element={<WorkDetails />} />
+        </Routes>
     </div>
   );
 };

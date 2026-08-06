@@ -1,58 +1,61 @@
-import React, { useRef, useEffect } from "react"
-import gsap from "gsap"
-import { useLocation } from "react-router-dom"
+import { useRef, useImperativeHandle, forwardRef } from "react";
+import gsap from "gsap";
 
+const PageTransition = forwardRef((props, ref) => {
+  const top = useRef();
+  const bottom = useRef();
 
-const PageTransition = (props) => {
-  const panelsRef = useRef([])
-  const pageRef = useRef(null)
-  const NUM_PANELS = 7
-  const currentPath = useLocation()
+  useImperativeHandle(ref, () => ({
+    play: () => {
+      return new Promise((resolve) => {
+        gsap.set([top.current, bottom.current], {
+          yPercent: (i) => (i === 0 ? -100 : 100),
+        });
 
-  useEffect(() => {
-    const tl = gsap.timeline()
+        const tl = gsap.timeline({
+          onComplete: resolve,
+        });
 
-    tl.to(panelsRef.current, {
-      clipPath: "inset(0% 0% 0% 0%)",
-      stagger: {from:"end", amount:0.4},
-      ease: "power3.inOut"
-    })
-
-    tl.to(panelsRef.current, {
-      clipPath: "inset(0% 0% 100% 0%)",
-      stagger: {from:"end", amount:0.4},
-      ease: "power3.inOut"
-    })
-
-    gsap.from(pageRef.current,{
-      opacity:0,
-      delay:1
-    })
-  }, [currentPath])
+        tl.to(top.current, {
+          yPercent: 0,
+          duration: 0.55,
+          ease: "power4.inOut",
+        })
+          .to(
+            bottom.current,
+            {
+              yPercent: 0,
+              duration: 0.55,
+              ease: "power4.inOut",
+            },
+            "<"
+          )
+          .to(
+            [top.current, bottom.current],
+            {
+              yPercent: (i) => (i === 0 ? 100 : -100),
+              duration: 0.55,
+              ease: "power4.inOut",
+              delay: 0.15,
+            }
+          );
+      });
+    },
+  }));
 
   return (
-    <div >
-      <div className="fixed top-0 left-0 z-50 pointer-events-none w-full h-screen flex flex-col">
-        {[...Array(NUM_PANELS)].map((_, i) => (
-          <div
-            key={i}
-            ref={el => panelsRef.current[i] = el}
-            className="page-transition-panel w-full"
-            style={{
-              height: `calc(${100 / NUM_PANELS}% + 1px)`,
-              marginTop: "-1px",
-              background: "#FEF3C6",
-              clipPath: "inset(100% 0% 0% 0%)"
-            }}
-          />
-        ))}
-      </div>
+    <div className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
+      <div
+        ref={top}
+        className="absolute top-0 left-0 h-1/2 w-full bg-black"
+      />
 
-      <div ref={pageRef}>
-        {props.children}
-      </div>
+      <div
+        ref={bottom}
+        className="absolute bottom-0 left-0 h-1/2 w-full bg-black"
+      />
     </div>
-  )
-}
+  );
+});
 
-export default PageTransition
+export default PageTransition;
