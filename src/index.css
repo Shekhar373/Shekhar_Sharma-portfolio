@@ -19,26 +19,26 @@ body {
   src: url(/public/heading.otf);
 }
 
-/* button {
+.button-animation {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
-} */
+}
 
 /* glowing animated border */
-/* button::before {
+.button-animation::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   padding: 1px; /* border thickness */
 
-  /* background: linear-gradient(
+   background: linear-gradient(
     120deg,
     transparent,
     rgba(255, 255, 255, 0.431),
     transparent
-  ); */ */
-/* 
+  ); 
+
   background-size: 200% 200%;
   animation: borderMove 4s linear infinite;
 
@@ -47,10 +47,10 @@ body {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-} */
+} 
 
 /* subtle glow */
-/* button::after {
+.button-animation::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -64,20 +64,20 @@ body {
   transition: 0.3s;
 }
 
-hover effect
-button:hover::after {
+/* hover effect */
+.button-animation:hover::after {
   opacity: 1;
-} */
+} 
 
 /* animation */
-/* @keyframes borderMove {
+ @keyframes borderMove {
   0% {
     background-position: 0% 50%;
   }
   100% {
     background-position: 200% 50%;
   }
-} */
+} 
 
 .border-animate::after {
   content: "";
