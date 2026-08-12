@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import AboutMe from "../components/AboutMe";
 import Services from "../components/Services";
+import TechStack from "../components/TechStack";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
           <Projects />
           <AboutMe />
           <Services />
+          {/* <TechStack /> */}
           <Contact />
           <Footer />
         </div>

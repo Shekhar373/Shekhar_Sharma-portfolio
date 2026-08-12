@@ -8,6 +8,7 @@ import LenisComponent from "./components/common/Lenis";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Layout from "./components/common/Layout";
 import Navbar from "./components/common/Navbar";
+import PlayGround from "./pages/PlayGround";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
      
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/playground" element={<PlayGround />} />
           <Route path="/work" element={<Work />} />
           <Route path="/work/:slug" element={<WorkDetails />} />
         </Routes>

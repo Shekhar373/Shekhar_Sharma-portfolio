@@ -1,14 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { work } from "../../data/project";
 import gsap from "gsap";
+import { useParams } from "react-router-dom";
 
-const images = [
-  "https://framerusercontent.com/images/nUOFtL4GaXuxDUtYcldRriWIA.jpg?scale-down-to=2048&width=3680&height=2760",
-  "https://framerusercontent.com/images/XeQ2h13KxLuhsc8dxrPvrCo1U.jpg?scale-down-to=2048&width=5000&height=3750",
-  "https://framerusercontent.com/images/0sAomQtmBe6xnVwRWYeIDfgDs.jpg?scale-down-to=2048&width=3680&height=2760",
-  "https://framerusercontent.com/images/7OONZVo3yVeY2VyTXZiNx9MXIkg.jpg?scale-down-to=2048&width=3680&height=2760",
-  "https://framerusercontent.com/images/Ee6DB9MNUKlgtPB8nYOdEYZ8i1M.png?scale-down-to=2048&width=3955&height=2966.jpg",
-  "https://i.pinimg.com/1200x/fc/d1/a8/fcd1a89545d70bfa91916bb1f92386b3.jpg",
-];
+// Use the slug from route to load correct project's images
+const getProjectImagesBySlug = (slug) => {
+  const project = work.find(item => item.slug === slug);
+  if (project && project.image1 && project.image2 && project.image3 && project.image4) {
+    return [project.image1, project.image2, project.image3, project.image4];
+  }
+  // fallback: no images
+  return [];
+};
 
 const useResponsiveGallery = (trackRef, wrapperRef) => {
   useEffect(() => {
@@ -118,16 +121,16 @@ const useResponsiveGallery = (trackRef, wrapperRef) => {
 };
 
 const ImageGallery = () => {
+  const { slug } = useParams();
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
 
+  const images = getProjectImagesBySlug(slug);
+
   useResponsiveGallery(trackRef, wrapperRef);
 
-  // Responsive aspect for gallery height
-  // Heights per breakpoint & widths per breakpoint
-  // h-[40vw] on xs, h-[45vw] on sm, h-[55vh] on md, h-[60vh] on lg, h-[70vh] on xl
-  // w-[90vw] on xs, w-[80vw] on sm+, w-[50vw] on lg, w-[40vw] on xl+
-  // Use clamp to help, but use Tailwind for classnames
+  // If no images, render nothing or a fallback (optional)
+  if (images.length === 0) return null;
 
   return (
     <section className="w-full overflow-hidden py-8 sm:py-16 md:py-20">

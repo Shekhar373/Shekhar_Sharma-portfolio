@@ -9,22 +9,22 @@ const Services = () => {
     {
       heading: "FRONTEND DEVELOPMENT",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
+        "Building fast, responsive, modern websites with clean code and seamless user experiences.",
     },
     {
       heading: "CREATIVE PORTFOLIO",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
+        "Designing visually striking portfolios that showcase your work, personality, and creative digital presence.",
     },
     {
       heading: "INTERACTIVE ANIMATION",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
+        "Creating engaging animations and interactions that make websites feel dynamic, immersive, and memorable.",
     },
     {
       heading: "3D EXPERIENCE",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quos quibusdam ",
+        "Developing immersive 3D web experiences using WebGL, Three.js, and interactive visual elements. ",
     },
   ];
 
@@ -73,7 +73,7 @@ const Services = () => {
               <h1 className="mix-blend-difference">{service.heading}</h1>
             </div>
             <div className="h-full w-full lg:w-1/4 max-md:text-xs font-medium flex items-center">
-              <h1 className="mix-blend-difference">{service.description}</h1>
+              <h1 className="mix-blend-difference font-light">{service.description}</h1>
             </div>
           </div>
         ))}

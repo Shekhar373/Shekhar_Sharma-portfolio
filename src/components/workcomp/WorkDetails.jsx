@@ -18,8 +18,7 @@ const WorkDetails = () => {
         <div className="pt-[16vh] md:pt-[30vh]">
           <h1 className="text-3xl sm:text-4xl md:text-[5vw] font-heading">{project.title}</h1>
           <h1 className="text-base sm:text-lg md:text-xl mt-2">
-            A production company portfolio that doesn't present its work. It
-            immerses you in it.
+            {project.description}
           </h1>
         </div>
 
@@ -47,28 +46,20 @@ const WorkDetails = () => {
       <section className="h-[60vh] lg:h-screen w-full flex flex-col items-end justify-center gap-8 md:gap-20 p-4 md:p-10">
         <div className="h-auto md:h-[30vh] w-full md:w-[70vw] border-b flex flex-col justify-around pb-8 md:pb-0">
           <h1 className="text-2xl md:text-3xl font-bold">CHALLENGE</h1>
-          <h1 className="text-xs md:text-sm mt-3">
-            For a production company working with clients like Lollapalooza
-            Paris and Santander, the website needed to do what their films do:
-            capture attention immediately and hold it. The challenge was
-            building a digital experience that felt as intentional and immersive
-            as the content Alaska creates.
+          <h1 className="text-xs md:text-lg mt-3">
+            {project.challenge}
           </h1>
         </div>
         <div className="h-auto md:h-[30vh] w-full md:w-[70vw] border-b flex flex-col justify-around">
           <h1 className="text-2xl md:text-3xl font-bold mt-8 md:mt-0">SOLUTION</h1>
-          <h1 className="text-xs md:text-sm mt-3">
-            We designed the site around the directors — not the company. Each
-            director becomes an entry point into their own visual universe, with
-            video-first presentation and a navigation system that feels like
-            moving through scenes, not pages. The result is a site that works
-            the way Alaska's films do: image first, always.
+          <h1 className="text-xs md:text-lg mt-3">
+           {project.solution}
           </h1>
         </div>
       </section>
       <section>
         <ImageGallery />
-        <Result livelink={project.livelink} />
+        <Result result={project.result} livelink={project.livelink} />
       </section>
 
       <Footer />
