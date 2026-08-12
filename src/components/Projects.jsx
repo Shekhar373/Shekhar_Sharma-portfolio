@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <div className="h-fit w-full flex flex-col justify-center items-center">
-      <h1 className="text-[12vw] lg:text-[8vw] font-[heading] pb-[10vh]">
+      <h1 className="text-[12vw] lg:text-[8vw] font-[heading] lg:pb-[10vh]">
         WORK
       </h1>
       <Link to="/work">
