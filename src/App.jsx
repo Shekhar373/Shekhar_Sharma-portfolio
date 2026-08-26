@@ -12,7 +12,7 @@ import PlayGround from "./pages/PlayGround";
 
 const App = () => {
   return (
-    <div className="bg-[#000014] text-amber-100 overflow-x-hidden">
+    <div className="bg-[#000002] text-amber-100 overflow-x-hidden">
       <div className="fixed top-0 z-50 w-full">
         <Navbar />
       </div>

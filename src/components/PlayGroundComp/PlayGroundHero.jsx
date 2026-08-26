@@ -1,26 +1,24 @@
 import React from "react";
-import RotatingGallery from "../../r3f/RotatingGallery";
-
-const images = [
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80",
-  "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=800&q=80",
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-  "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=80",
-  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
-  "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
-  "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
-  "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&q=80",
-  "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80",
-];
+import PlayGroundVideos from "./PlayGroundVideos";
 
 const PlayGroundHero = () => {
   return (
-    <div className="h-screen w-full flex items-center px-10">
-      <div>
-        <h1 className="text-5xl">THINGS I BUILD <br /> WHEN I'M NOT <br /> BUILDING WEBSITES</h1>
+    <div className="h-screen w-full text-center flex flex-col items-center justify-center px-10">
+      <div className="flex flex-col gap-10">
+        <h1 className="text-[#7d7d7a] text-sm tracking-widest font-light">
+          A WORKBENCH FOR SIDE PROJECTS — EST. WHENEVER I GET BORED
+        </h1>
+        <h1 className="font-[heading]  text-[8vw] leading-[6vw]">
+          THINGS I BUILD <br /> WHEN{" "}
+          <span className="text-[8vw] leading-[4vw] font-[playground-heading]">I'M</span> NOT{" "}
+          <br /> <span className="text-[#d75d16]">BUILDING WEBSITES</span>
+        </h1>
+        <h1 className="text-[#7d7d7a] text-sm tracking-widest font-light">
+          Weekend tools, half-finished experiments, and the occasional thing{" "}
+          <br /> that actually shipped. Mostly built between 11pm and whenever
+          the <br /> coffee runs out.
+        </h1>
       </div>
-      <RotatingGallery images={images} />
     </div>
   );
 };

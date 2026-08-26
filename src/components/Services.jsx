@@ -35,10 +35,10 @@ const Services = () => {
 
   return (
     <>
-    <div className="h-fit w-full p-5 ">
+    <div className="h-fit w-full p-5 lg:mb-10">
         <h1 className="text-[12vw] lg:text-[8vw] font-[heading] font-light">SERVICES</h1>
     </div>
-      <div className="lg:h-[120vh] w-full flex flex-col justify-center relative z-20">
+      <div className="lg:h-fit w-full flex flex-col justify-center relative z-20">
         {services.map((service, idx) => (
           <div
             key={idx}
@@ -60,14 +60,14 @@ const Services = () => {
           >
             <div
               ref={imageRefs.current[idx]}
-              className="absolute inset-0 overflow-hidden"
+              className="absolute inset-0 overflow-hidden bg-amber-100"
               style={{ clipPath: "inset(100% 0 0 0)" }}
             >
-              <img
+              {/* <img
                 src="https://i.pinimg.com/736x/e6/41/0b/e6410b54136be46bcefae0b0cfdaca50.jpg"
                 className="h-full w-full object-cover"
                 alt=""
-              />
+              /> */}
             </div>
             <div className="h-full w-full lg:w-3/4 text-[6vw] lg:text-[3vw] font-light flex ">
               <h1 className="mix-blend-difference">{service.heading}</h1>

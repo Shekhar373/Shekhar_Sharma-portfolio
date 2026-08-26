@@ -18,6 +18,10 @@ body {
   font-family: heading;
   src: url(/public/heading.otf);
 }
+@font-face {
+  font-family: playground-heading;
+  src: url(./assets/Edition-BF69b289c277a15.otf);
+}
 
 .button-animation {
   backdrop-filter: blur(10px);
