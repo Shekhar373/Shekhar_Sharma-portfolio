@@ -5,6 +5,10 @@ body {
   font-family: font;
 }
 
+/* *{
+  outline: 2px solid red;
+} */
+
 ::selection {
   background: rgb(241, 226, 189);
   color: #000014;
@@ -12,16 +16,16 @@ body {
 
 @font-face {
   font-family: font;
-  src: url(/NotoSans-VariableFont_wdth\,wght.ttf);
+  src: url(/public/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: heading;
   src: url(/public/heading.otf);
 }
-@font-face {
+/* @font-face {
   font-family: playground-heading;
   src: url(./assets/Edition-BF69b289c277a15.otf);
-}
+} */
 
 .button-animation {
   backdrop-filter: blur(10px);

@@ -39,7 +39,7 @@ const About = () => {
     //   });
     // });
   return (
-    <div ref={sectionRef} className="h-[40vh] lg:h-[80vh]  flex flex-col leading-[6vw] p-5 gap-3 justify-center font-extralight text-[7vw] text-amber-100">
+    <div ref={sectionRef} className="h-[40vh] lg:h-fit lg:mt-[10vh] flex flex-col leading-[6vw] p-5 gap-3 justify-center font-extralight text-[7vw] text-amber-100">
       <span ref={leftref} className="left">
         ENGINEERING IMMERSIVE
       </span>

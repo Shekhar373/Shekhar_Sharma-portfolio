@@ -1,9 +1,9 @@
 import React from "react";
-import PlayGroundHero from "../components/PlayGroundComp/PlayGroundHero";
 import GridBackground from "../r3f/GridBackground";
 import { Canvas } from "@react-three/fiber";
-import PlayGroundVideos from "../components/PlayGroundComp/PlayGroundVideos";
-import Footer from "../components/Footer";
+import PlayGroundVideos from "../components/PlayGroundComp/PlayGroundHero/PlayGroundVideos";
+import Footer from "../components/HomeComp/Footer";
+import PlayGroundHero from "../components/PlayGroundComp/PlayGroundHero/PlayGroundHero";
 
 const PlayGround = () => {
   return (

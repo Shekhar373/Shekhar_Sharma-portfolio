@@ -7,22 +7,22 @@ const Services = () => {
   // Service items
   const services = [
     {
-      heading: "FRONTEND DEVELOPMENT",
+      heading: "Frontend Developer",
       description:
         "Building fast, responsive, modern websites with clean code and seamless user experiences.",
     },
     {
-      heading: "CREATIVE PORTFOLIO",
+      heading: "Creative Portfolio",
       description:
         "Designing visually striking portfolios that showcase your work, personality, and creative digital presence.",
     },
     {
-      heading: "INTERACTIVE ANIMATION",
+      heading: "Interactive Animation",
       description:
         "Creating engaging animations and interactions that make websites feel dynamic, immersive, and memorable.",
     },
     {
-      heading: "3D EXPERIENCE",
+      heading: "3D Experience",
       description:
         "Developing immersive 3D web experiences using WebGL, Three.js, and interactive visual elements. ",
     },
@@ -36,7 +36,7 @@ const Services = () => {
   return (
     <>
     <div className="h-fit w-full p-5 lg:mb-10">
-        <h1 className="text-[12vw] lg:text-[8vw] font-[heading] font-light">SERVICES</h1>
+        <h1 className="text-[12vw] tracking-tighter lg:text-[8vw]">Services</h1>
     </div>
       <div className="lg:h-fit w-full flex flex-col justify-center relative z-20">
         {services.map((service, idx) => (
@@ -72,7 +72,7 @@ const Services = () => {
             <div className="h-full w-full lg:w-3/4 text-[6vw] lg:text-[3vw] font-light flex ">
               <h1 className="mix-blend-difference">{service.heading}</h1>
             </div>
-            <div className="h-full w-full lg:w-1/4 max-md:text-xs font-medium flex items-center">
+            <div className="h-full w-full lg:w-1/4 max-md:text-xs font-medium hidden lg:flex items-center ">
               <h1 className="mix-blend-difference font-light">{service.description}</h1>
             </div>
           </div>

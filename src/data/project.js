@@ -1,6 +1,6 @@
 export const work = [
   {
-    title: "NEW HEW STUDIO",
+    title: "New Hew Studio",
     slug: "new-hew-studio",
     cover: "/projects/newhew-studio/new-cover.webp",
     image1: "/projects/newhew-studio/image-1.png",

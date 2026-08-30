@@ -1,6 +1,6 @@
 import React from 'react'
 import WorkCard from '../components/workcomp/WorkCard'
-import Footer from '../components/Footer'
+import Footer from '../components/HomeComp/Footer'
 
 const Work = () => {
   return (

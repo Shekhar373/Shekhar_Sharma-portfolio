@@ -12,17 +12,17 @@ const Hero = () => {
       scale:0.2,
       ease:"power1.inOut",
       scrollTrigger:{
-        trigger:".hero",
+        trigger:"#hero",
         start:"top top",
-        end:"bottom -150",
-        // pin:true,
+        end:"bottom top",
+        pin:true,
         // markers:true,
         scrub:1
       }
     })
   },[])
   return (
-    <div className="hero h-screen relative w-full flex justify-center items-center lg:items-end gap-5 text-center">
+    <div id="hero" className="h-screen w-full flex justify-center items-center lg:items-end gap-5 text-center">
       <div className="font-[heading] text-amber-100">
         <h1 ref={textref} className="text-[17vw] lg:text-[11vw] leading-[15vw] lg:leading-[9vw]">SHEKHAR SHARMA</h1>
       </div>

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { work } from "../../data/project";
 import ImageGallery from "./ImageGallery";
 import Result from "./Result";
-import Footer from "../Footer";
+import Footer from "../HomeComp/Footer";
 
 const WorkDetails = () => {
   const container = useRef();
@@ -16,7 +16,7 @@ const WorkDetails = () => {
     <main className="bg-white text-black">
       <section className="h-fit w-full flex flex-col gap-10 p-4 md:p-10">
         <div className="pt-[16vh] md:pt-[30vh]">
-          <h1 className="text-3xl sm:text-4xl md:text-[5vw] font-heading">{project.title}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-[5vw] tracking-tighter">{project.title}</h1>
           <h1 className="text-base sm:text-lg md:text-xl mt-2">
             {project.description}
           </h1>

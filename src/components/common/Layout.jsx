@@ -1,43 +1,18 @@
-import { Outlet, useLocation } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import PageTransition from "./PageTransition";
+import React from "react";
+import { Outlet } from "react-router-dom";
+import PageTransition from "./PageTransition/PageTransition";
 
-export default function Layout() {
-  const transition = useRef();
-  const page = useRef();
-
-  const location = useLocation();
-
-  useEffect(() => {
-    async function animate() {
-      await transition.current.play();
-
-      gsap.fromTo(
-        page.current,
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          ease: "power3.out",
-        }
-      );
-    }
-
-    animate();
-  }, [location.pathname]);
-
+const Layout = () => {
   return (
     <>
-      <PageTransition ref={transition} />
 
-      <main ref={page}>
+      <main>
         <Outlet />
       </main>
+
+      <PageTransition />
     </>
   );
-}
+};
+
+export default Layout;
