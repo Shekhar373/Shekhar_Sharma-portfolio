@@ -122,13 +122,17 @@ const Projects = () => {
       className="relative w-full h-screen overflow-hidden text-white "
       style={{ position: "relative" }}
     >
-      <div ref={containerRef} className="flex flex-row h-screen w-[250vw]">
-        <div className="h-full w-[50vw]  flex flex-col gap-10 justify-center items-end ">
-         <h1 className="text-[5vw] tracking-tighter leading-[5vw]">
-         Selected Work <br /> & Exploration
-         </h1>
-         <h1 className="text-xl text-white/50">View All Projects</h1>
-
+      <div
+        ref={containerRef}
+        className="flex flex-row h-screen w-[260vw] lg:w-[250vw]"
+      >
+        <div className="h-full w-[90vw] lg:w-[50vw] text-center flex flex-col gap-10 justify-center items-end">
+          <h1 className="text-[8vw] lg:text-[5vw] tracking-tighter leading-[8vw] lg:leading-[5vw]">
+            Selected Work <br /> & Exploration
+          </h1>
+          <h1 className="text-sm max-md:pl-5 max-md:w-full lg:text-xl text-white/50">
+            View All Projects
+          </h1>
         </div>
         {pinProject.map((project, idx) => (
           <div
@@ -141,7 +145,11 @@ const Projects = () => {
                 {project.name}
               </h1>
             </div> */}
-            <TransitionLink to={`/work/${project.slug}`} key={project.slug} className="relative z-10">
+            <TransitionLink
+              to={`/work/${project.slug}`}
+              key={project.slug}
+              className="relative z-10"
+            >
               <img
                 ref={(ref) => setImgRef(ref, idx)}
                 src={project.image}
@@ -151,10 +159,13 @@ const Projects = () => {
                 style={{ userSelect: "none" }}
               />
               {/* The view-text will be positioned absolutely over the Link */}
-              <div className="h-[10vh] lg:h-[15vh] w-[70vw] lg:w-[40vw] p-2 flex flex-col justify-between">
-                <h1 className="text-4xl">{project.name}</h1>
-                <div className=" flex">
-                  <h1 className="w-[60%] text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, vero.</h1>
+              <div className="h-fit lg:h-[15vh] w-[70vw] lg:w-[40vw] p-2 flex flex-col justify-between">
+                <h1 className="text-2xl lg:text-4xl">{project.name}</h1>
+                <div className="hidden lg:flex">
+                  <h1 className="w-[60%] text-[3vw] lg:text-xs">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Esse, vero.
+                  </h1>
                   <h1 className="w-[40%] text-end">Explore Project</h1>
                 </div>
               </div>
@@ -180,7 +191,6 @@ const Projects = () => {
             More Projects Coming Soon
           </h1>
         </div> */}
-   
       </div>
     </div>
   );

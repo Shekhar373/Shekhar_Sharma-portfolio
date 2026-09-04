@@ -50,7 +50,7 @@ const WorkDetails = () => {
             {project.challenge}
           </h1>
         </div>
-        <div className="h-auto md:h-[30vh] w-full md:w-[70vw] border-b flex flex-col justify-around">
+        <div className="h-auto md:h-[30vh] w-full md:w-[70vw] border-b pb-8 md:pb-0 flex flex-col justify-around">
           <h1 className="text-2xl md:text-3xl font-bold mt-8 md:mt-0">SOLUTION</h1>
           <h1 className="text-xs md:text-lg mt-3">
            {project.solution}

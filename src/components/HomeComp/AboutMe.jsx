@@ -20,8 +20,8 @@ const AboutMe = () => {
       stagger:0.1,
       scrollTrigger: {
         trigger: parentRef.current,
-        start: "top 50%",
-        end: "top -20%",
+        start: "top 60%",
+        end: "top -10%",
         // pin:true,
         scrub:true,
         // markers: true,
@@ -38,7 +38,7 @@ const AboutMe = () => {
     <div ref={parentRef} className="h-[80vh] lg:h-screen w-full flex justify-center items-center lg:my-[20vh] p-10">
       <h1
           ref={textRef}
-          className="lg:leading-tight text-[6vw] text-center lg:text-5xl overflow-hidden lg:px-[10vw]"
+          className="lg:leading-tight text-xl  text-center lg:text-5xl overflow-hidden lg:px-[10vw]"
         >
           I’m a frontend developer who enjoys turning creative ideas into interactive web experiences. I love experimenting with animation, 3D, and WebGL to build websites that feel different, engaging, and fun to explore.
         </h1>

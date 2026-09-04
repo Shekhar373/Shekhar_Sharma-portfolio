@@ -58,10 +58,11 @@ const WorkCard = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col max-md:gap-8">
       {work.map((project) => (
         <TransitionLink to={`/work/${project.slug}`} key={project.slug}>
-          <div className={`
+          <div
+            className={`
               workcard-main
               relative
               overflow-hidden
@@ -76,10 +77,12 @@ const WorkCard = () => {
               duration-300
               shadow-lg
               cursor-pointer
-              mb-8
-          `}>
+              
+          `}
+          >
             {/* Overlay card */}
-            <div className={`
+            <div
+              className={`
               absolute z-10
               flex flex-col
               sm:flex-row
@@ -106,7 +109,9 @@ const WorkCard = () => {
             >
               {/* Title */}
               <div className="flex-1 flex flex-col justify-center items-center sm:items-start text-xs sm:text-base font-semibold pt-1 sm:pt-5">
-                <h1 className="text-center sm:text-left text-[4vw] sm:text-xl md:text-2xl lg:text-3xl tracking-tight leading-none mb-1 max-w-[80vw] sm:max-w-none">{project.title}</h1>
+                <h1 className="text-center sm:text-left text-[4vw] sm:text-xl md:text-2xl lg:text-3xl tracking-tight leading-none mb-1 max-w-[80vw] sm:max-w-none">
+                  {project.title}
+                </h1>
               </div>
               {/* Project Thumb */}
               <div className="flex justify-center items-center flex-shrink-0">

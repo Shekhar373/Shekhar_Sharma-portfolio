@@ -74,10 +74,10 @@ const TeckStack = () => {
   });
 
   return (
-    <div ref={parentRef} className="h-fit w-full flex flex-col lg:flex-row p-10 mt-[20vh]">
+    <div ref={parentRef} className="h-fit w-full flex flex-col lg:flex-row p-5 lg:p-10 mt-[20vh]">
       <div ref={pinRef} className="h-fit lg:h-[137vh] text-center w-full lg:w-1/2 pt-[5vh]">
         <div className="">
-          <h1 className="text-[6vw] leading-[6vw] tracking-tighter">
+          <h1 className="text-[8vw] lg:text-[6vw] lg:leading-[6vw] tracking-tighter">
             Tech Stack
           </h1>
           <h1 className="text-sm font-light text-center lg:pr-[10vw]">
@@ -90,8 +90,8 @@ const TeckStack = () => {
         {stack.map((stack) => {
           return (
             <div className="h-[10vh] lg:h-[15vh] w-full border-b border-b-amber-100/30 flex items-center lg:px-5 justify-between">
-              <h1 className="text-xl font-medium">{stack.title}</h1>
-              <h1 className="text-xs font-extralight tracking-wider text-white">
+              <h1 className="text-sm lg:text-xl font-medium">{stack.title}</h1>
+              <h1 className="text-[2.5vw] lg:text-xs font-extralight tracking-wider text-white">
                 {stack.type}
               </h1>
             </div>
