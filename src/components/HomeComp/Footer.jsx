@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Footer = () => {
+
+  // Function to scroll back to the top
+  const handleBackToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }
+
   return (
     <div className="lg:h-[120vh] bg-black text-white w-full relative z-10 p-5 overflow-hidden flex flex-col">
       {/* Title */}
@@ -31,7 +41,10 @@ const Footer = () => {
             </h1>
             <h1 className="opacity-65">TIME</h1>
           </div>
-          <h1 className="opacity-65 hover:opacity-100 transition-all cursor-pointer hidden md:block">
+          <h1 
+            className="opacity-65 hover:opacity-100 transition-all cursor-pointer hidden md:block"
+            onClick={handleBackToTop}
+          >
             BACK TO TOP
           </h1>
         </div>
@@ -45,7 +58,10 @@ const Footer = () => {
             LINKEDIN
           </h1>
           {/* Show BACK TO TOP on mobile at the end of socials */}
-          <h1 className="opacity-65 hover:opacity-100 transition-all cursor-pointer md:hidden mt-4">
+          <h1
+            className="opacity-65 hover:opacity-100 transition-all cursor-pointer md:hidden mt-4"
+            onClick={handleBackToTop}
+          >
             BACK TO TOP
           </h1>
         </div>

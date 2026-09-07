@@ -99,6 +99,18 @@ body {
 .border-animate:hover::after {
   width: 100%;
 }
+.border-animate-amber::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1px;
+  background: #FEF3C6;
+  transition: width 0.3s;
+}
+
+.border-animate-amber:hover::after {
+  width: 100%;
+}
 
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;

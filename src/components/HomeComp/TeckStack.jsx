@@ -75,21 +75,21 @@ const TeckStack = () => {
 
   return (
     <div ref={parentRef} className="h-fit w-full flex flex-col lg:flex-row p-5 lg:p-10 mt-[20vh]">
-      <div ref={pinRef} className="h-fit lg:h-[137vh] text-center w-full lg:w-1/2 pt-[5vh]">
+      <div ref={pinRef} className="h-fit lg:h-[137vh] w-full lg:w-1/2 pt-[5vh]">
         <div className="">
           <h1 className="text-[8vw] lg:text-[6vw] lg:leading-[6vw] tracking-tighter">
             Tech Stack
           </h1>
-          <h1 className="text-sm font-light text-center lg:pr-[10vw]">
+          {/* <h1 className="w-[30vw] text-sm font-light text-center">
             These are the primary tools and technologies I use to build
             performant, accessible, and delightful web experiences.
-          </h1>
+          </h1> */}
         </div>
       </div>
       <div className="h-full w-full lg:w-1/2 lg:px-10">
-        {stack.map((stack) => {
+        {stack.map((stack, idx) => {
           return (
-            <div className="h-[10vh] lg:h-[15vh] w-full border-b border-b-amber-100/30 flex items-center lg:px-5 justify-between">
+            <div key={idx} className="h-[10vh] lg:h-[15vh] w-full border-b border-b-amber-100/30 flex items-center lg:px-5 justify-between">
               <h1 className="text-sm lg:text-xl font-medium">{stack.title}</h1>
               <h1 className="text-[2.5vw] lg:text-xs font-extralight tracking-wider text-white">
                 {stack.type}

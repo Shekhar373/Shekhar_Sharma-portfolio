@@ -9,9 +9,9 @@ const Navbar = () => {
         <TransitionLink to="/" className="text-4xl font-[heading]">SS</TransitionLink>
       </div>
       <div className="flex gap-2 lg:gap-3 text-sm lg:text-sm">
-        <TransitionLink to="/work">Projects</TransitionLink>
-        <TransitionLink to="/playground">PlayGround</TransitionLink>
-        <h3>Contact Us</h3>
+        <TransitionLink className="border-animate-amber" to="/work">Projects</TransitionLink>
+        <TransitionLink className="border-animate-amber" to="/playground">PlayGround</TransitionLink>
+        <h3 className="border-animate-amber">Contact Us</h3>
       </div>
     </div>
   );

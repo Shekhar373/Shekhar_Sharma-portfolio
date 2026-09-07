@@ -20,8 +20,7 @@ const Home = () => {
           <Starfield />
         </Canvas>
       </div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+      <div>
           <Hero />
           {/* <About /> */}
           <AboutMe />
@@ -30,7 +29,6 @@ const Home = () => {
           <TeckStack />
           <Contact />
           <Footer />
-        </div>
       </div>
     </div>
   );
