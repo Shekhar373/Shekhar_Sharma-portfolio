@@ -2,14 +2,12 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const images = [
-    "/projects/newhew-studio/image-1.png",
-    "/projects/newhew-studio/image-2.png",
-    "/projects/newhew-studio/image-3.png",
-    "/projects/newhew-studio/image-4.png",
-    "/projects/echo-studio/image-1.webp",
-    "/projects/echo-studio/image-2.webp",
-    "/projects/echo-studio/image-3.webp",
-    "/projects/newhew-studio/image-4.png",
+  "https://i.pinimg.com/736x/b4/bd/0e/b4bd0e825715de22d44cf3c2e4c009d1.jpg",
+  "https://i.pinimg.com/736x/9f/8f/31/9f8f31601b519a1a9e38f43d25183b21.jpg",
+  "https://i.pinimg.com/736x/93/d1/a5/93d1a5437b730e357847d793be71ac50.jpg",
+  "https://i.pinimg.com/1200x/4d/f9/99/4df999f1826f97d6183f10f8f7a809af.jpg",
+  "https://i.pinimg.com/736x/72/78/1a/72781a3baa89ef2288428dbe5e307b9d.jpg",
+  "https://i.pinimg.com/736x/9f/8f/31/9f8f31601b519a1a9e38f43d25183b21.jpg",
 ];
 
 const ImageTrailSimple = () => {
@@ -38,7 +36,7 @@ const ImageTrailSimple = () => {
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       // Don't create images too close together
-      if (distance < 80) return;
+      if (distance < 150) return;
 
       // Calculate velocity
       const deltaTime = Math.max(now - lastTime.current, 1);
@@ -109,10 +107,10 @@ const ImageTrailSimple = () => {
       }).to(
         img,
         {
-          scale: 0.7,
+          scale: 0.3,
           opacity: 0,
           duration: 0.8,
-          ease: "power2.inOut",
+          ease: "power4.Out",
         },
         "+=0.15"
       );
@@ -127,9 +125,23 @@ const ImageTrailSimple = () => {
 
   return (
     <div
-      ref={containerRef}
-      className="fixed inset-0 overflow-hidden pointer-events-none z-50"
-    />
+  ref={containerRef}
+  className="fixed inset-0 overflow-hidden pointer-events-none z-50 bg-[#EFECE5]"
+>
+  <div className="absolute z-10 inset-0 flex items-center justify-center">
+    <h1
+      className="
+        text-[15vw]
+        text-transparent
+        [-webkit-text-stroke:2px_white]
+        mix-blend-difference
+        select-none
+      "
+    >
+      Image-Trail
+    </h1>
+  </div>
+</div>
   );
 };
 

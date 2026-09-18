@@ -16,12 +16,13 @@ const AboutMe = () => {
 
     // Animate the words
     gsap.from(split.chars, {
-      opacity: 0.05,
-      stagger:0.1,
+      opacity: 0,
+      filter:"blur(12px)",
+      stagger:0.005,
       scrollTrigger: {
         trigger: parentRef.current,
         start: "top 60%",
-        end: "top -10%",
+        end: "top -30%",
         // pin:true,
         scrub:true,
         // markers: true,
